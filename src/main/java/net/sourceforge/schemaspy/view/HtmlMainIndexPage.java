@@ -138,7 +138,7 @@ public class HtmlMainIndexPage extends HtmlFormatter {
         html.write("  <td class='container'>");
         String xmlName = db.getName();
         if (db.getSchema() != null)
-            xmlName += '.' + db.getSchema();
+            xmlName += '.' + encodeHref(db.getSchema());
         html.write("<br><a href='" + xmlName + ".xml' title='XML Representation'>XML Representation</a>");
         html.write("<br><a href='insertionOrder.txt' title='Useful for loading data into a database'>Insertion Order</a>&nbsp;");
         html.write("<a href='deletionOrder.txt' title='Useful for purging data from a database'>Deletion Order</a>");
